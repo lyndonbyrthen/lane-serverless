@@ -1,0 +1,63 @@
+@use "@material/theme" with (
+  $primary: #e8f5e9,
+  $secondary: #a5d6a7,
+  $on-primary: #00695c,
+  $on-secondary: #fff176,
+);
+
+@use "@material/button/mdc-button";
+@use "@material/drawer";
+@use "@material/list/mdc-list";
+@use "@material/list";
+@use "@material/icon-button/styles";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/card";
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/typography/mdc-typography";
+
+// @include list.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include card.core-styles;
+
+body {
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    padding: 0;
+    font-size: 18px;
+}
+
+main {
+    padding-top: 60px;
+}
+
+.root-menu-drawer {
+    @include drawer.width(200px);
+    @include drawer.border-color(black);
+    @include drawer.scrim-fill-color(black);
+    position: fixed;
+}
+
+.mdc-drawer-scrim {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    &.hidden {
+        display: none;
+    }
+}
+
+.img-con {
+    /*     height: 150px;
+    width: 100%;
+    margin: 0; */
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

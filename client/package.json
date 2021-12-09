@@ -1,0 +1,59 @@
+{
+  "name": "lanediko.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack-cli",
+    "watch": "webpack-cli watch",
+    "prettier": "prettier --single-quote --jsx-single-quote --write ./src"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "dependencies": {
+    "@material/button": "^13.0.0",
+    "@material/card": "^13.0.0",
+    "@material/drawer": "^13.0.0",
+    "@material/icon-button": "^13.0.0",
+    "@material/image-list": "^13.0.0",
+    "@material/layout-grid": "^13.0.0",
+    "@material/list": "^13.0.0",
+    "@material/menu": "^13.0.0",
+    "@material/theme": "^13.0.0",
+    "@material/top-app-bar": "^13.0.0",
+    "@material/typography": "^13.0.0",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "autoprefixer": "^10.4.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^7.0.0",
+    "cross-var": "^1.1.0",
+    "css-loader": "^6.5.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "postcss-loader": "^6.2.1",
+    "prettier": "2.0.5",
+    "resolve": "1.15.0",
+    "sass": "^1.44.0",
+    "sass-loader": "^12.4.0",
+    "source-map-support": "^0.5.19",
+    "style-loader": "^3.3.1",
+    "typescript": "~3.7.2",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

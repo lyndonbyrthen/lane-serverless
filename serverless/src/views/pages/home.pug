@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  main
+    .mdc-layout-grid
+      .mdc-layout-grid__inner
+        - var portfolios = [1,5,2,4,5];
+        each port in portfolios
+          .mdc-layout-grid__cell
+            .mdc-card
+              .mdc-card__primary-action
+                .mdc-card__media.mdc-card__media--16-9
+                  .mdc-card__media-content 
+                    .img-con
+                      img(src='images/frog.jpg', alt='frog')
+              .portfolio-caption
+                .mdc-typography--headline6 portfolio title
+                .mdc-typography--body portfolio description

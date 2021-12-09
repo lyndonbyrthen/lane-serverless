@@ -1,0 +1,61 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+    meta(charset='utf-8')
+    if env!=='prod'
+      meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+
+    title lane diko
+
+    //- link(rel='shortcut icon', href=`${assetPath}/favicon.ico`)
+
+    link(href='//fonts.googleapis.com/css?family=Roboto:300,400,500', rel='stylesheet', type='text/css')
+    link(href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300', rel='stylesheet', type='text/css')
+    link(href='//fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet', type='text/css')
+    link(href=`${assetPath}/css/main.css`, rel='stylesheet', type='text/css')
+
+  body
+    header.mdc-top-app-bar
+      .mdc-top-app-bar__row
+        section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start
+          button.material-icons.mdc-top-app-bar__navigation-icon.mdc-icon-button(aria-label='Open navigation menu').menu-button menu
+          span.mdc-top-app-bar__title lane diko
+        section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-end(role='toolbar')
+          button.material-icons.mdc-top-app-bar__action-item.mdc-icon-button(aria-label='Favorite') favorite
+          button.material-icons.mdc-top-app-bar__action-item.mdc-icon-button(aria-label='Search') search
+          //- button.material-icons.mdc-top-app-bar__action-item.mdc-icon-button(aria-label='Options') more_vert
+
+    aside.mdc-drawer.mdc-drawer--dismissible.root-menu-drawer
+      .mdc-drawer__header lane diko
+      .mdc-drawer__title portfolios
+      .mdc-drawer__content
+        ul.mdc-list
+          li.mdc-list-item(tabindex='0')
+            span.mdc-list-item__ripple
+            span.mdc-list-item__text Item 1 - Division 1
+          li.mdc-list-item
+            span.mdc-list-item__ripple
+            span.mdc-list-item__text Item 2 - Division 1
+          li.mdc-list-divider(role='separator')
+          li.mdc-list-item
+            span.mdc-list-item__ripple
+            span.mdc-list-item__text Item 1 - Division 2
+          li.mdc-list-item
+            span.mdc-list-item__ripple
+            span.mdc-list-item__text Item 2 - Division 2
+    
+    .mdc-drawer-scrim.hidden
+    
+    
+    block content
+
+    
+    script(type='text/javascript').
+      !{`sectionId = '${sectionId}';`}
+      !{`env = '${env}';`}
+    script(type='text/javascript', src=`${assetPath}/js/main.js`)
